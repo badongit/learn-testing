@@ -15,10 +15,10 @@ class Employee {
       payableHours = 40 + (this.hoursWorked - 40) * 1.5;
     }
 
-    this.grossPay = payableHours * this.hourlyRate;
+    this.grossPay = this.hoursWorked * this.hourlyRate;
 
-    if (this.grossPay > 200) {
-      this.tax = (this.grossPay - 200) * 0.2;
+    if (this.grossPay >= 200) {
+      this.tax = this.grossPay * 0.2;
     }
 
     this.netPay = this.grossPay - this.tax;
